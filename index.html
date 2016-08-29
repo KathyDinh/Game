@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="asia.css">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+        
+        .odds:hover {
+            cursor: pointer;
+        }
+        
+        #ticket {
+            border-radius: 25px;
+            border: 2px solid #2d4694;
+            padding: 20px;
+            width: 200px;
+            height: 150px;
+             position:fixed;
+            left: 40%;
+        }
+
+        #spinWheelBtn {
+            position:fixed;
+            left: 50%;
+        }
+        #wrapper,#button-holder{
+            text-align: center
+        }
+        fieldset{
+            font-size: 15px;
+            color: white;
+            font-family: Verdana;
+        }
+    </style>
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <script type="text/javascript" src="./spinwheel.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Welcome, Team Rabbit!</legend>
+
+        <div>Points:
+            <span id="points"></span></div>
+        <br/>
+        <div>Multiplier:
+            <span id="multiplier"></span></div>
+        <br/>
+        <div>Category:
+            <span id="category"></span></div>
+        <br/>
+        <div>Accumulated Stake: $
+            <span id="accumulatedStake"></span></div>
+       
+    </fieldset>
+
+    <table style="width:75%" align="center">
+        <caption>Today - Live</caption>
+        <tbody>
+            <tr>
+                <th rowspan="2" width="60" class="BLN">Time</th>
+                <th rowspan="2" width="177" colspan="2">Event</th>
+                <th colspan="4">Full Time</th>
+                <th colspan="3">First Half</th>
+                <th rowspan="2" width="45">+ More</th>
+            </tr>
+            <tr>
+                <th colspan="" class="cursor-help" width="90" title="Full Time Handicap">HDP</th>
+                <th colspan="" class="cursor-help" width="110" title="Full Time Over/Under">OU</th>
+                <th class="cursor-help" title="Full Time 1X2" width="40">1X2</th>
+                <th class="cursor-help" title="Full Time Odd/Even" width="50">OE</th>
+                <th colspan="" class="cursor-help" title="First Half Handicap" width="90">HDP</th>
+                <th colspan="" class="cursor-help" title="First Half Over/Under" width="110">OU</th>
+                <th class="cursor-help" title="First Half 1X2" width="40">1X2</th>
+            </tr>
+        </tbody>
+
+        <tbody>
+            <tr class="league-row">
+                <td colspan="11" id="bu:od:refresh-nonlive">
+                    <div class="icon-bg league-refresh-icon" title="Refresh"></div><span class="league-name">    <span id="bu:od:fav:add-tournament:687" class="icon-bg league-fav-untick" title="Add to my favourites"></span>                    <span>International Friendly U16</span></span>
+                </td>
+            </tr>
+        </tbody>
+
+        <tbody class="blue-bg">
+            <tr id="row-nonlive-0-0" bgcolor="#ccddff">
+                <td class="time-column" rowspan="3" title="">
+                    <div class="time-column-inner">
+                        <div class="time-column-icon"> </div>
+                        <div class="time-column-content"> <span>16:00<br><span class="Blue">Live </span></span> <br> <span class="Red"></span> </div>
+                    </div>
+                </td>
+
+                <td class="BLN team-name-column" colspan="2" rowspan="3" title="" width="150"><span class="Blue">Romania U16</span><br><span class="Red">England U16</span><br><span class="black">Draw</span></td>
+                <td class="BBN BRN"><a class="odds-hdp odds-wrap "><span class="hdp-point">&nbsp;</span><span class="odds-width  dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461988:h:1.90:2" class="odds black">1.90</span></span></span></a></td>
+                <td class="BBN BRN BLN"><a class="odds-ou odds-wrap "><span class="hdp-point">3.0</span><span class="ou-tag">o</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461990:h:1.92:2" class="odds black">1.92</span></span></span></a></td>
+                <td class="BBN BRN BLN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461992:1:4.60:2" class="odds black">4.60</span></span></span></a></td>
+                <td class="BLN BBN"><a class="odds-oe odds-wrap "><span class="oe-tag">o</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461989:h:1.96:2" class="odds black">1.96</span></span></span></a></td>
+                <td class="BBN BRN"><a class="odds-hdp odds-wrap "><span class="hdp-point">&nbsp;</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461994:h:2.11:2" class="odds black">2.11</span></span></span></a></td>
+                <td class="BBN BRN BLN"><a class="odds-ou odds-wrap "><span class="hdp-point">1-1.5</span><span class="ou-tag">o</span><span class="odds-width dummy-class"><span class=" &nbsp; dummy-more-class"><span id="bu:od:price:32461996:h:1.92:2" class="odds black">1.92</span></span></span></a></td>
+                <td class="BLN BBN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461995:1:5.00:2" class="odds black">5.00</span></span></span></a></td>
+                <td rowspan="3" class="more-column"><span id="bu:od:nonlive-more:1811939" class="icon-bg more-icon " title="View more market options">1</span></td>
+            </tr>
+            <tr id="row-nonlive-0-1" bgcolor="#ccddff">
+                <td class="BBN BRN BTN"><a class="odds-hdp odds-wrap "><span class="hdp-point">1.0</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461988:a:1.94:2" class="odds black">1.94</span></span></span></a></td>
+                <td class="BBN BRN BLN BTN"><a class="odds-ou odds-wrap "><span class="ou-tag">u</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461990:a:1.90:2" class="odds black">1.90</span></span></span></a></td>
+                <td class="BBN BRN BLN BTN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461992:2:1.54:2" class="odds black">1.54</span></span></span></a></td>
+                <td class="BBN BLN BTN"><a class="odds-oe odds-wrap "><span class="oe-tag">e</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461989:a:1.90:2" class="odds black">1.90</span></span></span></a></td>
+                <td class="BBN BRN BTN"><a class="odds-hdp odds-wrap "><span class="hdp-point">0-0.5</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461994:a:1.74:2" class="odds black">1.74</span></span></span></a></td>
+                <td class="BBN BRN BLN BTN"><a class="odds-ou odds-wrap "><span class="ou-tag">u</span><span class="odds-width dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461996:a:1.90:2" class="odds black">1.90</span></span></span></a></td>
+                <td class="BBN BLN BTN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461995:2:2.02:2" class="odds black">2.02</span></span></span></a></td>
+            </tr>
+            <tr id="row-nonlive-0-2" bgcolor="#ccddff">
+                <td class="BTN BRN"></td>
+                <td class="BRN BLN BTN"></td>
+                <td class="BRN BLN BTN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461992:x:3.95:2" class="odds black">3.95</span></span></span></a></td>
+                <td class="BLN BTN"></td>
+                <td class="BRN BTN"></td>
+                <td class="BRN BLN BTN"></td>
+                <td class="BLN BTN"><a class="odds-wrap "><span class="dummy-class"><span class="&nbsp; dummy-more-class"><span id="bu:od:price:32461995:x:2.36:2" class="odds black">2.36</span></span></span></a></td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+    <div class="selection-body ticket-mp-body" style="display:none" id="ticket">
+        <div class="ticket-content " id="tk:tk">
+            <div class="team-league">
+                <div class="team-name"><span class="Blue">Romania U16 </span><span class="grey">-vs-</span><span class="Red"> England U16</span></div>
+                <div class="league-name"><span class="grey">International Friendly U16</span></div>
+            </div>
+            <div class="ticket-nbt"></div>
+            <div class="stake">$ <input type="number" tabindex="3" class="stake-input stake-text-dark" id="stake" onfocus="this.value = this.value;"
+                    maxlength="19" placeholder="Stake">
+            </div>
+
+            <div class="bet-buttons">
+                <input type="button" value="Cancel" tabindex="5" class="one-px-bg bet-buttons-cancel" id="cancel">
+                <input type="button" value="Submit" tabindex="6" class="one-px-bg bet-buttons-submit" id="submit"></div>
+        </div>
+        <div class="mp-content hide" id="tk:mp"></div>
+    </div>
+    <button id="spinWheelBtn" style="display:none">Spin Wheel</button>
+    
+
+    <div id="wrapper" style="display:none">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="400">
+            <circle cx="200" cy="200" r="180" fill="#222222"/>
+            <g id="spinner-board"></g>
+            <path id="spinner-arrow" d="M 195 200 L 195 70 L 188 70 L 200 55 L 212 70 L 205 70 205 200 Z" fill="#EEEEEE" stroke="#222222" style="stroke-width:2px"/>
+            <circle cx="200" cy="200" r="18" fill="#444444" stroke="#222222" style="stroke-width:2px"/>
+            <circle cx="200" cy="200" r="9" fill="#666666" stroke="#222222" style="stroke-width:2px"/>
+        </svg>
+        <div id="button-holder">
+            <button id="spinner-button" onclick="toggleSpinning();">Spin 500 Points!</button>
+            <button id="hide-button" onclick="$('#wrapper').hide();showSpinWheelIfQualified();">Hide the wheel</button>
+        </div>
+    </div>
+    <script>
+    spinWheelLimit = 500;
+    user = {
+        points: 0,
+        stake: 0,
+        level: 1,
+        multiplier: 1,
+        category: "Bronze",
+        accumulatedStake: 0,
+    };
+
+    levels = {
+        1: {
+            name: "Bronze",
+            target: 0,
+            multiplier: 1
+        },
+          2: {
+            name: "Silver",
+            target: 1000,
+            multiplier: 2
+        },
+         3: {
+            name: "Gold",
+            target: 5000,
+            multiplier: 3
+        },
+         4: {
+            name: "Platinum",
+            target: 20000,
+            multiplier: 4
+        }
+    };
+
+    var points = {
+        bronze: 0,
+        silver: 0,
+        gold: 0,
+        platinum: 0
+    }
+
+    function clearStake(){
+        $("#stake").val("");
+    }
+
+    function showSpinWheelIfQualified(){
+        if(user.points >= spinWheelLimit){
+            $("#spinWheelBtn").show();
+        }
+    }
+
+    function checkForLevelUp(currentLevel){
+        var nextLevel = levels[currentLevel+1];
+        
+        if(!nextLevel || user.accumulatedStake < nextLevel.target){
+            return;
+        }
+        checkForLevelUp(currentLevel+1);
+        
+        if(user.level <= currentLevel){
+            user.level = currentLevel;
+            user.category = nextLevel.name;
+            user.multiplier = nextLevel.multiplier;
+        }
+     
+    }
+    function updateUserDisplay(){
+        checkForLevelUp(user.level);
+
+        $("#points").text(user.points);
+        $("#multiplier").text(user.multiplier);
+        $("#accumulatedStake").text(user.accumulatedStake); 
+        $("#category").text(user.category);
+    }
+
+    window.onload = function(){
+        updateUserDisplay();
+        showSpinWheelIfQualified();
+
+        $(".odds").click(function(){
+            $("#ticket").show();
+        });
+
+        $("#submit").click(function(){
+            $("#ticket").show();
+
+
+            var stake = +$("#stake").val();
+            user.points += stake*user.multiplier;
+            user.accumulatedStake += stake;
+
+            updateUserDisplay();
+            $("#ticket").hide();
+            clearStake();
+
+            showSpinWheelIfQualified();
+        });
+
+        $("#cancel").click(function(){
+            $("#ticket").hide();
+            clearStake();
+        });
+       
+        $("input[name=category]").click(function(e){
+            currentUserCategory = $('input[name=category]:checked').val();
+            updateUserDisplay();
+        });
+
+        $("#spinWheelBtn").click(function(){
+            $("#spinWheelBtn").hide();
+            $("#wrapper").show();
+        })
+
+    };
+    </script>
+</body>
+
+</html>
